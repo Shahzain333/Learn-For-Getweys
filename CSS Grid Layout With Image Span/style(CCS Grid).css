@@ -1,0 +1,66 @@
+.wrapper > div {
+    background: #eee;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+    background: #ddd;
+}
+
+.wrapper {
+    /* display: grid; */
+    /* 3 equal columns fr means fraction there we will use percentage and pixel */
+    /* grid-template-columns: 1fr 1fr 1fr;  */
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em; */
+    /* grid-auto-rows: 100px; */
+    /* grid-auto-rows: minmax(100px, auto); */
+
+    /* ------------------------ For Box -------------------- */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    /* justify-items: center; */
+    /* align-items: center; */
+    justify-items: stretch;      /*Strech Same as before content*/
+    align-items: stretch;
+}
+/* 
+.nested > div {
+    border: #333 solid 1px;
+    padding: 1em;
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows: minmax(70px, auto);
+} */
+
+.box1{
+    /* align-self: start; */
+    grid-column: 1/3; /* This will make box1 span across the first three  columns */
+    grid-row: 1/3; /* This will make box1 span across the first --- two row */
+}
+
+.box2{
+    /* align-self: end; */
+    grid-column: 3;
+    grid-row: 1/3; /* This will make box2 span across the first two row */
+} 
+
+.box3{
+    /* justify-self: end; */
+    grid-column: 2/4; /* This will make box3 span across the second and third column */
+    grid-row: 3; /* This will make box3 span across the third row */
+}
+
+.box4{
+    grid-column: 1;
+    grid-row: 2/4; /* This will make box4 span across the second and third row */
+    border: 1px solid #333;
+}
+
+
